@@ -1,0 +1,9 @@
+<resources>
+    <string name="create">צור</string>
+    <string name="code">קוד</string>
+    <string name="description">fdsfdsfds</string>
+    <string name="choose_an_app">בחר אפליקציה כדי שיתוף ה-QR</string>
+    <string name="text_qr">טקסט עבור QR</string>
+    <string name="enter_text">הזן טקסט כדי ליצור קוד QR</string>
+    <string name="wrong">משהו לא בסדר, נסה שוב</string>
+</resources>
