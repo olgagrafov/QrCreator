@@ -9,7 +9,6 @@ val Teal200 = Color(0xFF03DAC5)
 
 val Black = Color(0xFF262727)
 val DarkGray = Color(0xFF828585)
-val LightGray = Color(0xFFE9ECEC)
+val LightGray = Color(0xFFE9EEEE)
 val White = Color(0xFFF5F5F5)
-
-val Transparent =  Color.Transparent
+val Background =   Color(0xFFF2F7F7)

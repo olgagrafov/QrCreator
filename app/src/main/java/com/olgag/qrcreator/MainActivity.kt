@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
@@ -89,8 +90,8 @@ fun GetScaffold(context: Context) {
             contentColor = MaterialTheme.colors.onPrimary
         ) },
         content = { MainContent(context) },
-        backgroundColor = MaterialTheme.colors.background
     )
+
 }
 
 @Composable
@@ -109,10 +110,15 @@ fun MainContent(context: Context) {
 
     Box(
         Modifier
+            .background(brush = Brush.verticalGradient(
+                colors = listOf(
+                    MaterialTheme.colors.background,
+                    MaterialTheme.colors.primary
+                )
+            ))
             .fillMaxSize()
-            .wrapContentSize(Alignment.TopCenter)) {
-        SaveableContent(isPortrait, context)
-    }
+            .wrapContentSize(Alignment.TopCenter))
+            { SaveableContent(isPortrait, context) }
 }
 
 @Composable

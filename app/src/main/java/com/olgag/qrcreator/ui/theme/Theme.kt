@@ -25,7 +25,7 @@ private val LightColorPalette = lightColors(
     onPrimary = LightGray,
     primaryVariant = Purple700,
     secondary = Teal200,
-    background = LightGray,
+    background = Background,
     surface = DarkGray,
 //
 //    onSecondary = Black,
