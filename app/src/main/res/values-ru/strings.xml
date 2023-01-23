@@ -1,9 +1,9 @@
 <resources>
     <string name="create">Создать</string>
     <string name="code">код</string>
-    <string name="description">fdsfdsfds</string>
+    <string name="description">Описание</string>
     <string name="choose_an_app">Выберите приложение для отправки QR</string>
-    <string name="text_qr">Текст QR-кода</string>
-    <string name="enter_text">Введите текст, чтобы сгенерировать QR-код</string>
+    <string name="text_qr">URL-адрес</string>
+    <string name="enter_text">Введите URL-адрес для создания QR-кода</string>
     <string name="wrong">Что-то не так, попробуйте еще раз</string>
 </resources>

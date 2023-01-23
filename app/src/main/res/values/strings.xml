@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">QR Creator</string>
-    <string name="create">Creat</string>
+    <string name="file_provider" translatable="false">com.olgag.qrcreator.fileprovider</string>
+    <string name="create">Create</string>
     <string name="code">code</string>
     <string name="description">description</string>
     <string name="choose_an_app">Choose an app for share the QR</string>
-    <string name="text_qr">QR code text</string>
-    <string name="enter_text">Enter text to generate a QR code</string>
+    <string name="text_qr">URL address</string>
+    <string name="enter_text">Enter the URL address to generate a QR code</string>
     <string name="wrong">Something wrong, try again</string>
 </resources>
