@@ -3,7 +3,10 @@
     <string name="code">קוד</string>
     <string name="description">תיאור</string>
     <string name="choose_an_app">בחר אפליקציה כדי שיתוף ה-QR</string>
-    <string name="text_qr">כתובת ה-URL</string>
+    <string name="text_qr">הזן את ה-URL</string>
     <string name="enter_text">הזן את כתובת ה-URL כדי ליצור קוד QR</string>
     <string name="wrong">משהו לא בסדר, נסה שוב</string>
+    <string name="google_url">גוגל את ה-URL להפקת קוד QR</string>
+    <string name="close_google">סגור את גוגל</string>
+    <string name="set_url">צור קוד QR עבור אתר זה</string>
 </resources>

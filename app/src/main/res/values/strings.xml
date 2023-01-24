@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name" translatable="false">QR Creator</string>
     <string name="file_provider" translatable="false">com.olgag.qrcreator.fileprovider</string>
+    <string name="start_url" translatable="false">https://www.google.com/</string>
     <string name="create">Create</string>
     <string name="code">code</string>
     <string name="description">description</string>
     <string name="choose_an_app">Choose an app for share the QR</string>
-    <string name="text_qr">URL address</string>
+    <string name="text_qr">Enter URL address</string>
     <string name="enter_text">Enter the URL address to generate a QR code</string>
     <string name="wrong">Something wrong, try again</string>
+    <string name="google_url">Google the URL for generating a QR code</string>
+    <string name="close_google">Close Google</string>
+    <string name="set_url">Create QR code for this site</string>
 </resources>
