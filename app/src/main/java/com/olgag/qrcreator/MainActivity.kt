@@ -279,11 +279,11 @@ fun WebViewPage(context: Context) : Boolean{
                     }
                 }
                 settings.javaScriptEnabled = true
+                loadUrl(context.getString(R.string.start_url))
                 webView = this
             }
         }, update = {
             webView = it
-            webView?.loadUrl(context.getString(R.string.start_url))
         }
     )
     Button(
