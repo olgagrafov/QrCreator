@@ -9,7 +9,8 @@
     <string name="text_qr">Enter URL address</string>
     <string name="enter_text">Enter the URL address to generate a QR code</string>
     <string name="wrong">Something wrong, try again</string>
-    <string name="google_url">Google the URL for generating a QR code</string>
+    <string name="google_url">Google the URL for generating a QR</string>
     <string name="close_google">Close Google</string>
-    <string name="set_url">Create QR code for this site</string>
+    <string name="set_url">Select this site to generate a QR code</string>
+    <string name="no_internet_connection">There is no internet connection available</string>
 </resources>

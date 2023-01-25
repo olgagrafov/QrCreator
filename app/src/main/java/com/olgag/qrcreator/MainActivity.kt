@@ -5,6 +5,9 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -35,6 +38,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
@@ -151,11 +155,12 @@ class MainActivity : ComponentActivity() {
         Column(modifier = Modifier.padding(16.dp)) {
             Button(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-                    .padding(vertical = 5.dp),
+                    .fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
-                onClick = { isShowGoogle =! isShowGoogle }) {
+                onClick = { if(isInternetAvailable(context) )
+                                isShowGoogle =! isShowGoogle
+                            else
+                                Toast.makeText(context, context.getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show()}) {
                 Text(if(isShowGoogle) context.getString(R.string.close_google) else context.getString(R.string.google_url))
             }
 
@@ -199,6 +204,8 @@ class MainActivity : ComponentActivity() {
                             onClick = {
                                 pic = createBitmapFromText(qrText1, context)
                                 kc?.hide()
+                                isShowGoogle = false
+                                qrFromURL = ""
                             },
                         ) {
                             Icon(Icons.Default.Done, null)
@@ -288,9 +295,9 @@ fun WebViewPage(context: Context) : Boolean{
     )
     Button(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(70.dp)
-            .padding(vertical = 5.dp),
+            .fillMaxWidth(),
+        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.onSecondary,
+            contentColor  = MaterialTheme.colors.secondary),
         shape = MaterialTheme.shapes.medium,
         onClick = { qrFromURL = webView?.url.toString()
                     returnValue = false
@@ -348,3 +355,10 @@ fun createBitmapFromText(qRString: String ,context: Context): Bitmap {
             false
         }
     }
+
+fun isInternetAvailable(context: Context): Boolean {
+    val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val network = connectivityManager.activeNetwork
+    val capabilities = connectivityManager.getNetworkCapabilities(network)
+    return capabilities?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) ?: false
+}
